@@ -1,121 +1,49 @@
 OKChain Overview
 ================
 
-1. What is OKChain
+What is OKChain
 ------------------
 
-1.1 Introduction of OKChain
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-OKChain is a set of business chains developed by OKEx with an aim to
-establish a secure and efficient Defi infrastructure. As our first
-self-developed chain, it is used to provide users with a more
+OKChain是OKEx开发的一组开源的区块链项目，旨在推动以区块链技术为基础的大规模商业应用落地。它赋予每一个参与的节点都享有同等地位的权利，让用户可以畅通无阻地发布和运行各种各样去中心化应用，发行自己的数字资产、创建自己的数字资产交易对，并进行自由交易，其采用的跨链技术是实现价值落地的关键。通过跨链模块，简单高效地实现区块链的价值互通、用户互通、场景应用互通，最终实现生态体系的共建，构建价值增值体系。
+
+
+【okchain多链生态图】
+
+OKChain is used to provide users with a more
 comprehensive credit enhancement service given that efficiency issues
 have been solved, and to cater for users’ demand for credit enhancement
 services while they trade crypto assets.
 
-OKChain currently includes two executable programs, okchaind and
-okchaincli.
+What is OKChain-OpenDEX
+----------------------------
 
--  okchaind: OKChain’s background program that is used to run full nodes
-   on OKChain
--  okchaincli: OKChain’s command-line client that is used to interact
-   with full nodes on OKChain
+OKChain-OpenDEX作为OKChain生态的第一个项目，是一个可以自由发行DEX的中间件，以"人人可以发DEX"为设计理念，提供运营一个DEX所需要的各种基础功能。与传统的DEX相比，采用了完全链上撮合和链上订单簿管理，使撮合信息更加透明和安全，同时相比较基于以太坊的项目，基于OKChain的集合竞价的撮合引擎可以实现秒级撮合，近似于中心化交易所的操作体验。并且，其特有的设计思路，并不是要构建一个属于某个利益主体的DEX，而且提供平台，实现技术与运营的分离，如同以太坊通过智能合约技术降低了数字资产发行的门槛，OKChain通过OpenDEX降低了运营数字资产交易对的门槛。
 
-The following modules are mainly included:
+【OpenDEX多运营方的图】
 
--  auth：account module
--  token：token module
--  order：order module
--  gov：governance module
--  backend：backend module
+阅读\ `DEX演进之路 <>`__\ 了解更多。\ ``此处跳转到项目博客``
+想运营自己的数字资产交易对？参考\ `DEX运营方指南 <>`__
 
-2. OKChain
-----------
+OKChain CLI
+----------------------------
 
-2.1 okchaind backend application
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-okchaind is used to initialize and activate full nodes on OKChain. It is
-OKChain's backend application. For further details, please refer to
-``okchaind -h`` as follows:
-
-.. code:: sh
-
-    $ okchaind -h
-    OKChain Daemon
-
-    Usage:
-      okchaind [command]
-
-    Available Commands:
-      init                Initialize genesis config, priv-validator file, and p2p-node file
-      collect-gentxs      Collect genesis txs and output a genesis.json file
-      testnet             Initialize files for a Okdexd testnet
-      gentx               Generate a genesis tx carrying a self delegation
-      add-genesis-account Adds an account to the genesis file
-      validate-genesis    validates the genesis file at the default location or at the location passed as an arg
-      start               Run the full node
-      unsafe-reset-all    Resets the blockchain database, removes address book files, and resets priv_validator.json to the genesis state
-
-      tendermint          Tendermint subcommands
-      export              Export state to JSON
-
-      version             Print the app version
-      help                Help about any command
-
-    Flags:
-          --enable_distr false   Enable distribution module (default false)
-      -h, --help                 help for okchaind
-          --home string          directory for config and data (default "$HOME/.okchaind")
-          --log_file string      Log file (default "$HOME/.okchaind/okchaind.log")
-          --log_level string     Log level (default "main:info,state:info,*:error")
-          --log_stdout           Print log to stdout, rather than a file (default true)
-          --passwd string        Pass word of sender (default "12345678")
-          --production_mode      Run in production mode or development mode. (default "false")
-          --trace                print out full stack trace on errors
-
-    Use "okchaind [command] --help" for more information about a command.
-
-2.2 okchaincli client
-~~~~~~~~~~~~~~~~~~~~~
-
-okchaincli is a command-line client of OKChain that offers rich
-functions to interact with the backend application of OKChain. It mainly
-includes two types of functions: tx function and query function. For
-further information, please refer to ``okchaincli -h`` as follows:
-
-.. code:: sh
-
-    $ okchaincli -h
-    OKChain Client
-
-    Usage:
-      okchaincli [command]
-
-    Available Commands:
-      status      Query remote node for status
-      config      Create or query an OKChain CLI configuration file
-      query       Querying subcommands
-      tx          Transactions subcommands
-      backend     backend subcommands
+``okchaincli`` is a command-line interface that lets you interact with the OKChain. gaiacli is the only tool that supports 100% of the OKChain features, including accounts, transfers, delegation, and governance. Learn more about ``okchaincli`` with the \ `delegator's CLI guide <>`__ .
 
 
-      keys        Add or view local private keys
+Running a full-node on the OKChian Testnet
+--------------------------------------------------------
+In order to run a full-node for the OKChain Testnet, you must first install ``okchaind``. Then, follow `the guide <>`__.
 
-      version     Print the app version
-      help        Help about any command
+If you are looking to run a validator node, follow the \ `validator setup guide <>`__.
 
-    Flags:
-          --chain-id string   Chain ID of tendermint node
-      -e, --encoding string   Binary encoding (hex|b64|btc) (default "hex")
-      -h, --help              help for okchaincli
-          --home string       directory for config and data (default "/Users/hanxueyang/.okchaincli")
-      -o, --output string     Output format (text|json) (default "text")
-          --passwd string     Pass word of sender (default "12345678")
-          --trace             print out full stack trace on errors
+Join the Community
+------------------------
+Have questions, comments, or new ideas? Participate in the OKChain community through one of the following channels. Also check out the latest events.
 
-    Use "okchaincli [command] --help" for more information about a command.
+- OKChain Community Chat
+- OKChain Developer Chat
+- OKChain Forum
+- OKChain on Reddit
 
-Meanwhile, users can also manage local private keys through the
-sub-command ``okchaincli keys``.
+

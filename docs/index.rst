@@ -50,23 +50,33 @@ Contents
 
    getting-start/introduction
 
-.. _user-docs:
+.. _delegators-docs:
 
 .. toctree::
    :maxdepth: 3
-   :caption: User
+   :caption: Delegators
 
-   getting-start/install
-   getting-start/join_testnet
-   getting-start/command_line
+   delegators/delegators-guide
+   delegators/delegators-faq
 
-.. _merchant-docs:
+.. _operations-docs:
 
 .. toctree::
    :maxdepth: 3
-   :caption: Merchant
+   :caption: DEX Operations
 
-   getting-start/ico
+   operations/operations-guide
+   operations/operations-faq
+
+.. _validators-docs:
+
+.. toctree::
+   :maxdepth: 3
+   :caption: Validators
+
+   validators/install
+   validators/join_testnet
+   validators/command_line
 
 .. _concept-docs:
 
