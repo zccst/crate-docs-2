@@ -46,7 +46,7 @@ Contents
 
 .. toctree::
    :maxdepth: 3
-   :caption: Quick start
+   :caption: OKChain
 
    getting-start/introduction
 
