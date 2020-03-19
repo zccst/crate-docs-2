@@ -1,39 +1,147 @@
-.. _index:
+.. okchain-docs documentation master file, created by
+   sphinx-quickstart on Tue Jan  7 11:23:39 2020.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
 
-=================
-CrateDB Reference
-=================
 
-CrateDB is a distributed SQL database that makes it simple to store and analyze
-massive amounts of machine data in real-time.
+OKChain Documentation
+===========================
 
-.. NOTE::
+Quick start
+-------------
 
-   This is a low-level reference manual.
+-  \ `Overview <getting-start/introduction.html>`__
+-  \ `Installation <getting-start/install.html>`__
+-  \ `Issue and listing of tokens <getting-start/ico.html>`__
 
-   Check out `Getting Started With CrateDB`_ for beginner documentation.
+API service
+-------------
 
-   Check out the `CrateDB Guide`_ for high-level documentation, including
-   overviews, best practices, and tutorials.
+-  \ `API details <api/http.html>`__
+-  \ `Details of node RPC <api/node_rpc.html>`__
 
-.. SEEALSO::
+DEX
+--------
 
-   CrateDB is an open source project and is `hosted on GitHub`_.
+DEX is a decentralized trading system developed based on OKChain where an order matching engine and an orderbook are available on-chain.
 
-.. rubric:: Table of contents
+-  \ `Details of call auction <trade/periodic_auction.html>`__
+-  \ `Fee details <fee.html>`__
+-  \ `Trade now <https://www.okex.com/dex-test>`__
+
+Version
+---------
+
+The version of the program relating to this documentation is: 0.1
+
+
+
+
+
+
+.. _Here: getting-start/introduction.md
+
+Contents
+========
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
+   :caption: Quick start
 
-   cli-tools
-   config/index
-   general/index
-   admin/index
-   sql/index
-   interfaces/index
-   editions
-   appendices/index
+   getting-start/introduction
 
-.. _CrateDB Guide: https://crate.io/docs/crate/guide/en/latest/
-.. _Getting Started With CrateDB: https://crate.io/docs/crate/getting-started/en/latest/
-.. _hosted on GitHub: https://github.com/crate/crate
+.. _user-docs:
+
+.. toctree::
+   :maxdepth: 3
+   :caption: User
+
+   getting-start/install
+   getting-start/join_testnet
+   getting-start/command_line
+
+.. _merchant-docs:
+
+.. toctree::
+   :maxdepth: 3
+   :caption: Merchant
+
+   getting-start/ico
+
+.. _concept-docs:
+
+.. toctree::
+   :maxdepth: 3
+   :caption: Concepts
+
+   concepts/general-concepts
+   concepts/sentry-nodes
+   getting-start/genesis
+   fee.md
+   concepts/gov
+   trade/periodic_auction
+   concepts/upgrade-concept
+
+.. _func-docs:
+
+.. toctree::
+   :maxdepth: 3
+   :caption: Functional Module
+
+   features/account
+   features/asset
+   features/order
+   features/send
+   features/backend
+   governance/overview
+   features/upgrade-overview
+
+.. _cmdClient-docs:
+
+.. toctree::
+   :maxdepth: 3
+   :caption: Command line client
+
+   getting-start/command/account
+   getting-start/command/token
+   getting-start/command/send
+   getting-start/command/order
+   getting-start/command/backend
+   getting-start/command/gov
+
+.. _api-docs:
+
+.. toctree::
+   :maxdepth: 3
+   :caption: API Service
+
+   api/http
+   api/node_rpc
+   api/sdk
+   api/msg
+
+.. _tool-docs:
+
+.. toctree::
+   :maxdepth: 3
+   :caption: Tools
+
+   tools/monitor
+   tools/command
+
+.. _faq-docs:
+
+.. toctree::
+   :maxdepth: 1
+   :caption: FAQ
+
+   faq.md
+
+.. _link-docs:
+
+.. toctree::
+   :maxdepth: 1
+   :caption: References
+
+   link.md
+
