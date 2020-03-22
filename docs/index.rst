@@ -49,6 +49,7 @@ Contents
    :caption: OKChain
 
    getting-start/introduction
+   rst_examples
 
 .. _delegators-docs:
 
