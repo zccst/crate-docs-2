@@ -46,27 +46,38 @@ Contents
 
 .. toctree::
    :maxdepth: 3
-   :caption: Quick start
+   :caption: OKChain
 
    getting-start/introduction
+   rst_examples
 
-.. _user-docs:
-
-.. toctree::
-   :maxdepth: 3
-   :caption: User
-
-   getting-start/install
-   getting-start/join_testnet
-   getting-start/command_line
-
-.. _merchant-docs:
+.. _delegators-docs:
 
 .. toctree::
    :maxdepth: 3
-   :caption: Merchant
+   :caption: Delegators
 
-   getting-start/ico
+   delegators/delegators-guide
+   delegators/delegators-faq
+
+.. _operations-docs:
+
+.. toctree::
+   :maxdepth: 3
+   :caption: DEX Operations
+
+   operations/operations-guide
+   operations/operations-faq
+
+.. _validators-docs:
+
+.. toctree::
+   :maxdepth: 3
+   :caption: Validators
+
+   validators/install
+   validators/join_testnet
+   validators/command_line
 
 .. _concept-docs:
 
