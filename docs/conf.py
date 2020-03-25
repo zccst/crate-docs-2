@@ -1,7 +1,7 @@
 from okchain1.theme.rtd.conf.crate_reference import *
 
 source_suffix = '.rst'
-site_url = 'https://crate.io/docs/crate/reference/en/latest/'
+site_url = 'https://zc-crate-docs-04.readthedocs.io/en/stable/'
 
 exclude_patterns = ['out/**', 'tmp/**', 'eggs/**', 'requirements.txt', 'README.rst']
 
