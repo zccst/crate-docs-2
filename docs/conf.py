@@ -1,4 +1,4 @@
-from okchain1.theme.rtd.conf.crate_reference import *
+from okchain1.theme.rtd.conf.okchain_docs import *
 
 source_suffix = '.rst'
 site_url = 'https://zc-crate-docs-04.readthedocs.io/en/stable/'
