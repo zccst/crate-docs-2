@@ -45,7 +45,7 @@ Contents
 ========
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 3
    :caption: Quick start
 
    getting-start/introduction
@@ -53,7 +53,7 @@ Contents
 .. _user-docs:
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 3
    :caption: User
 
    getting-start/install
@@ -63,7 +63,7 @@ Contents
 .. _merchant-docs:
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 3
    :caption: Merchant
 
    getting-start/ico
@@ -71,7 +71,7 @@ Contents
 .. _concept-docs:
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 3
    :caption: Concepts
 
    concepts/general-concepts
@@ -85,7 +85,7 @@ Contents
 .. _func-docs:
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 3
    :caption: Functional Module
 
    features/account
@@ -99,7 +99,7 @@ Contents
 .. _cmdClient-docs:
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 3
    :caption: Command line client
 
    getting-start/command/account
@@ -112,7 +112,7 @@ Contents
 .. _api-docs:
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 3
    :caption: API Service
 
    api/http
@@ -123,7 +123,7 @@ Contents
 .. _tool-docs:
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 3
    :caption: Tools
 
    tools/monitor
