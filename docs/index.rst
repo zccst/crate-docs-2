@@ -135,7 +135,7 @@ Contents
    :maxdepth: 1
    :caption: FAQ
 
-   faq.md
+   faq
 
 .. _link-docs:
 
@@ -143,5 +143,5 @@ Contents
    :maxdepth: 1
    :caption: References
 
-   link.md
+   link
 
