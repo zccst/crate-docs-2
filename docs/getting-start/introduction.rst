@@ -1,29 +1,36 @@
 Introduction
 ================
 
+
+.. figure:: http://s14.sinaimg.cn/middle/9dc4c475gbb076ca6e63d
+    :height: 200 px
+    :width: 200 px
+    :alt: a short description of the image, displayed by applications that cannot display images
+    :align: center
+
+    This is the caption of the figure (a simple paragraph).
+
 What is OKChain
 ------------------
 
 
-OKChain是OKEx开发的一组开源的区块链项目，旨在推动以区块链技术为基础的大规模商业应用落地。它赋予每一个参与的节点都享有同等地位的权利，让用户可以畅通无阻地发布和运行各种各样去中心化应用，发行自己的数字资产、创建自己的数字资产交易对，并进行自由交易，其采用的跨链技术是实现价值落地的关键。通过跨链模块，简单高效地实现区块链的价值互通、用户互通、场景应用互通，最终实现生态体系的共建，构建价值增值体系。
+OKChain is a group of open source blockchain projects developed by OKEx, aiming to promote the implementation of large-scale commercial applications based on blockchain technology. It gives every participating node the right to enjoy the same status, allowing users to publish and run a variety of decentralized applications, issue their own digital assets, create their own digital asset trading pairs, and trade freely. , The cross-chain technology it uses is the key to achieving value landing. Through the cross-chain module, the value intercommunication, user intercommunication, and scenario application intercommunication of the blockchain can be realized simply and efficiently, and finally the co-construction of the ecosystem can be realized, and the value-added system can be constructed.
 
 
-【okchain多链生态图】
 
 OKChain is used to provide users with a more
 comprehensive credit enhancement service given that efficiency issues
 have been solved, and to cater for users’ demand for credit enhancement
 services while they trade crypto assets.
 
-What is OKChain-OpenDEX
+What is OKChain-openDEX
 ----------------------------
 
-OKChain-OpenDEX作为OKChain生态的第一个项目，是一个可以自由发行DEX的中间件，以"人人可以发DEX"为设计理念，提供运营一个DEX所需要的各种基础功能。与传统的DEX相比，采用了完全链上撮合和链上订单簿管理，使撮合信息更加透明和安全，同时相比较基于以太坊的项目，基于OKChain的集合竞价的撮合引擎可以实现秒级撮合，近似于中心化交易所的操作体验。并且，其特有的设计思路，并不是要构建一个属于某个利益主体的DEX，而且提供平台，实现技术与运营的分离，如同以太坊通过智能合约技术降低了数字资产发行的门槛，OKChain通过OpenDEX降低了运营数字资产交易对的门槛。
+OKChain-openDEX, as the first project of the OKChain ecosystem, is a middleware that can freely issue DEX. With the design concept of "everyone can send DEX", it provides various basic functions needed to operate a DEX. Compared with traditional DEX, it adopts full on-chain matching and on-chain order book management to make matching information more transparent and safe. At the same time, compared with Ethereum-based projects, the matching engine based on OKChain's collective bidding can achieve second-level matching , Similar to the operating experience of a centralized exchange. In addition, its unique design idea is not to build a DEX belonging to a certain stakeholder, but also to provide a platform to achieve the separation of technology and operations, just as Ethereum reduces the threshold for digital asset issuance through smart contract technology. OKChain uses openDEX Lowered the threshold for operating digital asset trading pairs.
 
-【OpenDEX多运营方的图】
 
-阅读\ `DEX演进之路 <>`__\ 了解更多。\ ``此处跳转到项目博客``
-想运营自己的数字资产交易对？参考\ `DEX运营方指南 <>`__
+Read  `DEX Evolution Road <>`__  to learn more.  
+Want to run your own digital asset tokenpair? Reference  `DEX Operator Guide <>`__
 
 OKChain CLI
 ----------------------------
@@ -37,6 +44,30 @@ In order to run a full-node for the OKChain Testnet, you must first install ``ok
 
 If you are looking to run a validator node, follow the \ `validator setup guide <>`__.
 
+
+Quick start
+-------------
+
+-  \ `Overview <getting-start/introduction.html>`__
+-  \ `Installation <getting-start/install.html>`__
+-  \ `Issue and listing of tokens <getting-start/ico.html>`__
+
+API service
+-------------
+
+-  \ `API details <api/http.html>`__
+-  \ `Details of node RPC <api/node_rpc.html>`__
+
+DEX
+--------
+
+DEX is a decentralized trading system developed based on OKChain where an order matching engine and an orderbook are available on-chain.
+
+-  \ `Details of call auction <trade/periodic_auction.html>`__
+-  \ `Fee details <fee.html>`__
+-  \ `Trade now <https://www.okex.com/dex-test>`__
+
+
 Join the Community
 ------------------------
 Have questions, comments, or new ideas? Participate in the OKChain community through one of the following channels. Also check out the latest events.
@@ -47,3 +78,7 @@ Have questions, comments, or new ideas? Participate in the OKChain community thr
 - OKChain on Reddit
 
 
+Version
+---------
+
+The version of the program relating to this documentation is: 0.2
