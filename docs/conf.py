@@ -1,7 +1,5 @@
 from okchain1.theme.rtd.conf.okchain_docs import *
 
-import sphinx_rtd_theme
-
 source_suffix = '.rst'
 site_url = 'https://zc-crate-docs-04.readthedocs.io/en/stable/'
 
@@ -31,6 +29,5 @@ html_favicon = None
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-# html_theme = "sphinx_rtd_theme"
-def setup(app):
-    app.add_css_file('css/sphinx_rtd_theme.css')
+# def setup(app):
+#     app.add_css_file('css/sphinx_rtd_theme.css')
