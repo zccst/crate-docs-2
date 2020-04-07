@@ -58,8 +58,6 @@ Create a new limit order
     # place an order
     okchaincli tx order new [product] [side] [price] [quantity]
 
-::
-
     Flags:
       -a, --account-number uint     The account number of the signing account (offline mode only)
       -b, --broadcast-mode string   Transaction broadcasting mode (sync|async|block) (default "sync")
