@@ -8,16 +8,6 @@ exclude_patterns = ['out/**', 'tmp/**', 'eggs/**', 'requirements.txt', 'README.r
 extensions = [
     'crate.sphinx.csv',
     'sphinx_sitemap',
-    'sphinx.ext.autodoc',
-    'sphinx.ext.doctest',
-    'sphinx.ext.intersphinx',
-    'sphinx.ext.todo',
-    'sphinx.ext.coverage',
-    'sphinx.ext.mathjax',
-    'sphinx.ext.ifconfig',
-    'sphinx.ext.viewcode',
-    'sphinx.ext.githubpages',
-    'sphinx_markdown_tables',
 ]
 
 # crate.theme sets html_favicon to favicon.png which causes a warning because
