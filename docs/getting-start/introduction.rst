@@ -1,121 +1,84 @@
-OKChain Overview
+Introduction
 ================
 
-1. What is OKChain
+
+.. figure:: http://s14.sinaimg.cn/middle/9dc4c475gbb076ca6e63d
+    :height: 200 px
+    :width: 200 px
+    :alt: a short description of the image, displayed by applications that cannot display images
+    :align: center
+
+    This is the caption of the figure (a simple paragraph).
+
+What is OKChain
 ------------------
 
-1.1 Introduction of OKChain
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-OKChain is a set of business chains developed by OKEx with an aim to
-establish a secure and efficient Defi infrastructure. As our first
-self-developed chain, it is used to provide users with a more
+OKChain is a group of open source blockchain projects developed by OKEx, aiming to promote the implementation of large-scale commercial applications based on blockchain technology. It gives every participating node the right to enjoy the same status, allowing users to publish and run a variety of decentralized applications, issue their own digital assets, create their own digital asset trading pairs, and trade freely. , The cross-chain technology it uses is the key to achieving value landing. Through the cross-chain module, the value intercommunication, user intercommunication, and scenario application intercommunication of the blockchain can be realized simply and efficiently, and finally the co-construction of the ecosystem can be realized, and the value-added system can be constructed.
+
+
+
+OKChain is used to provide users with a more
 comprehensive credit enhancement service given that efficiency issues
 have been solved, and to cater for users’ demand for credit enhancement
 services while they trade crypto assets.
 
-OKChain currently includes two executable programs, okchaind and
-okchaincli.
+What is OKChain-openDEX
+----------------------------
 
--  okchaind: OKChain’s background program that is used to run full nodes
-   on OKChain
--  okchaincli: OKChain’s command-line client that is used to interact
-   with full nodes on OKChain
-
-The following modules are mainly included:
-
--  auth：account module
--  token：token module
--  order：order module
--  gov：governance module
--  backend：backend module
-
-2. OKChain
-----------
-
-2.1 okchaind backend application
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-okchaind is used to initialize and activate full nodes on OKChain. It is
-OKChain's backend application. For further details, please refer to
-``okchaind -h`` as follows:
-
-.. code:: sh
-
-    $ okchaind -h
-    OKChain Daemon
-
-    Usage:
-      okchaind [command]
-
-    Available Commands:
-      init                Initialize genesis config, priv-validator file, and p2p-node file
-      collect-gentxs      Collect genesis txs and output a genesis.json file
-      testnet             Initialize files for a Okdexd testnet
-      gentx               Generate a genesis tx carrying a self delegation
-      add-genesis-account Adds an account to the genesis file
-      validate-genesis    validates the genesis file at the default location or at the location passed as an arg
-      start               Run the full node
-      unsafe-reset-all    Resets the blockchain database, removes address book files, and resets priv_validator.json to the genesis state
-
-      tendermint          Tendermint subcommands
-      export              Export state to JSON
-
-      version             Print the app version
-      help                Help about any command
-
-    Flags:
-          --enable_distr false   Enable distribution module (default false)
-      -h, --help                 help for okchaind
-          --home string          directory for config and data (default "$HOME/.okchaind")
-          --log_file string      Log file (default "$HOME/.okchaind/okchaind.log")
-          --log_level string     Log level (default "main:info,state:info,*:error")
-          --log_stdout           Print log to stdout, rather than a file (default true)
-          --passwd string        Pass word of sender (default "12345678")
-          --production_mode      Run in production mode or development mode. (default "false")
-          --trace                print out full stack trace on errors
-
-    Use "okchaind [command] --help" for more information about a command.
-
-2.2 okchaincli client
-~~~~~~~~~~~~~~~~~~~~~
-
-okchaincli is a command-line client of OKChain that offers rich
-functions to interact with the backend application of OKChain. It mainly
-includes two types of functions: tx function and query function. For
-further information, please refer to ``okchaincli -h`` as follows:
-
-.. code:: sh
-
-    $ okchaincli -h
-    OKChain Client
-
-    Usage:
-      okchaincli [command]
-
-    Available Commands:
-      status      Query remote node for status
-      config      Create or query an OKChain CLI configuration file
-      query       Querying subcommands
-      tx          Transactions subcommands
-      backend     backend subcommands
+OKChain-openDEX, as the first project of the OKChain ecosystem, is a middleware that can freely issue DEX. With the design concept of "everyone can send DEX", it provides various basic functions needed to operate a DEX. Compared with traditional DEX, it adopts full on-chain matching and on-chain order book management to make matching information more transparent and safe. At the same time, compared with Ethereum-based projects, the matching engine based on OKChain's collective bidding can achieve second-level matching , Similar to the operating experience of a centralized exchange. In addition, its unique design idea is not to build a DEX belonging to a certain stakeholder, but also to provide a platform to achieve the separation of technology and operations, just as Ethereum reduces the threshold for digital asset issuance through smart contract technology. OKChain uses openDEX Lowered the threshold for operating digital asset trading pairs.
 
 
-      keys        Add or view local private keys
+Read  `DEX Evolution Road <>`__  to learn more.  
+Want to run your own digital asset tokenpair? Reference  `DEX Operator Guide <>`__
 
-      version     Print the app version
-      help        Help about any command
+OKChain CLI
+----------------------------
 
-    Flags:
-          --chain-id string   Chain ID of tendermint node
-      -e, --encoding string   Binary encoding (hex|b64|btc) (default "hex")
-      -h, --help              help for okchaincli
-          --home string       directory for config and data (default "/Users/hanxueyang/.okchaincli")
-      -o, --output string     Output format (text|json) (default "text")
-          --passwd string     Pass word of sender (default "12345678")
-          --trace             print out full stack trace on errors
+``okchaincli`` is a command-line interface that lets you interact with the OKChain. gaiacli is the only tool that supports 100% of the OKChain features, including accounts, transfers, delegation, and governance. Learn more about ``okchaincli`` with the \ `delegator's CLI guide <>`__ .
 
-    Use "okchaincli [command] --help" for more information about a command.
 
-Meanwhile, users can also manage local private keys through the
-sub-command ``okchaincli keys``.
+Running a full-node on the OKChian Testnet
+--------------------------------------------------------
+In order to run a full-node for the OKChain Testnet, you must first install ``okchaind``. Then, follow `the guide <>`__.
+
+If you are looking to run a validator node, follow the \ `validator setup guide <>`__.
+
+
+Quick start
+-------------
+
+-  \ `Overview <getting-start/introduction.html>`__
+-  \ `Installation <getting-start/install.html>`__
+-  \ `Issue and listing of tokens <getting-start/ico.html>`__
+
+API service
+-------------
+
+-  \ `API details <api/http.html>`__
+-  \ `Details of node RPC <api/node_rpc.html>`__
+
+DEX
+--------
+
+DEX is a decentralized trading system developed based on OKChain where an order matching engine and an orderbook are available on-chain.
+
+-  \ `Details of call auction <trade/periodic_auction.html>`__
+-  \ `Fee details <fee.html>`__
+-  \ `Trade now <https://www.okex.com/dex-test>`__
+
+
+Join the Community
+------------------------
+Have questions, comments, or new ideas? Participate in the OKChain community through one of the following channels. Also check out the latest events.
+
+- OKChain Community Chat
+- OKChain Developer Chat
+- OKChain Forum
+- OKChain on Reddit
+
+
+Version
+---------
+
+The version of the program relating to this documentation is: 0.2
