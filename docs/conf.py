@@ -9,7 +9,7 @@ exclude_patterns = ['out/**', 'tmp/**', 'eggs/**', 'requirements.txt', 'README.r
 
 extensions = [
     'crate.sphinx.csv',
-    'sphinx_sitemap'
+    'sphinx_sitemap',
     'sphinx.ext.autodoc',
     'sphinx.ext.doctest',
     'sphinx.ext.intersphinx',
