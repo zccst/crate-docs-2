@@ -4,29 +4,21 @@ DEX Operations Guide (CLI)
 This document contains all the necessary information for DEX operations to interact with the OKChain through the Command-Line Interface (CLI).
 
 
-身份注册及数字资产交易对发行
---------------------------
+Identity registration & digital asset transaction pair issuance
+------------------------------------------------------------------
 
 
 
-注册DEX运营方
-~~~~~~~~~~~~
+Registered DEX Operator
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-DEX运营方是OKChain中负责运营数字资产交易对的角色。通过在链上\ `注册DEX运营方 <>`__\ 后，拥有数字资产交易对的管理权利，每一个数字资产交易对都会属于一个DEX运营方。
 
-DEX运营方的基础属性。官方网站，logo，交易入口，app下载链接，第三方社交账号等。
+The DEX operator is the role in OKChain responsible for operating digital asset trading pairs. By `registering the DEX operator <>`__  on the chain, you have the right to manage digital asset trading pairs, and each digital asset trading pair will belong to a DEX operator.
 
-::
+The basic attributes of the DEX operator. Official website, logo, transaction entrance, app download link, third-party social account, etc.
 
-    此部分参考EOS的bp.json 设计 operation.json
-    https://www.eoshuobipool.com/bp.json 
-    https://www.eosx.io/
-    https://www.eosx.io/account/eoshuobipool
-    1.运行creat Operator [官方网站] 创建DEX运营方
-    2.编写operation.json上传到“官方网站/operation.json”
-    3.后期可以通过修改[官方网站] 属性，用户把[官方网站]更新为空可以视为网站更新维护/运营商跑路/交易所下线等场景
 
-operation.json模板
+operation.json Template
 
 .. code:: json
 
@@ -87,37 +79,39 @@ operation.json模板
       ]
     }
 
-OKChain的区块链浏览器就可以通过读取operation.json直接获取DEX运营方的相关数据。
+OKChain's blockchain browser can directly obtain the relevant data of the DEX operator by reading operation.json.
 
-发行自己的数字资产和交易对
-~~~~~~~~~~~~~~~~~~~~~~~~
+Issue your own digital assets and trading pairs
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-DEX运营商可以在任意时间发行自己的数字资产及交易对，出于安全的考虑，DEX运营方可以通过\ `代理功能 <>`__\ 指定代理账户发行自己的数字资产及交易对。
+DEX operators can issue their own digital assets and trading pairs at any time. For security reasons, DEX operators can issue their own digital assets and trading pairs through the designated agent account of \ `Agency Function <>`__ \.
 
-为自己的数字资产交易对添加撮合金
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Add alloys to your own digital asset trading pairs
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-为了公平，开放的使用区块链的撮合资源，OpenDEX采用竞价排名的方式分配系统资源，DEX可以通过添加\ **`数字资产撮合金 <>`__**\ ，使自己交易对的撮合被优先处理。
+In order to be fair and open to use the matching resources of the blockchain, OpenDEX uses bid ranking to allocate system resources. DEX can make matching of its own trading pairs by adding \ ** `digital asset matching alloy <>`__ ** \ Priority.
 
-流量入口及服务器
+Traffic entrance and server
 --------------------------
 
-运行OKChain的全节点
-~~~~~~~~~~~~~~~~~~~~~~~~
+Full node running OKChain
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-OKChain-OpenDEX采用链上订单簿管理和链上撮合的设计，因此DEX所需要的订单数据和行情数据需要从全节点数据中获取，查看\ `如何运行OKChain全节点 <>`__\ 。
+OKChain-OpenDEX adopts the design of on-chain order book management and on-chain matching, so the order data and market data needed by DEX need to be obtained from the full node data, see \ `How to run OKChain full node <>`__ \.
 
-启动数据插件
-~~~~~~~~~~~~~~~~~~~~~~~~
+Start the data plugin
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-依托于OKChain的\ `数据分层 <>`__\ 设计，我们将部分数据存到了链外，详情参见\ `keeper设计 <>`__\ 。OKChain-OpenDEX提供了两个插件方案，分别是\ `Backend模块插件 <>`__\ 和\ `Stream模块插件 <>`__\ 。
+Relying on OKChain's \ `data layering <>`__ \ design, we saved part of the data outside the chain. For details, see \ `keeper design <>`__ \. OKChain-OpenDEX provides two plug-in solutions, namely \ `Backend module plug-in <>`__ \ and \ `Stream module plug-in <>`__ \.
 
-`Backend模块 <>`__\ 采用轻量级sqlite作为链外数据存储层，提供了基础的订单数据和行情数据的查询\ `接口 <>`__\ 。如果想要更好的服务，可以通过\ `Stream模块 <>`__\ 将链上数据导入到数据中间件中，配合专门的推送及行情计算服务进行输出。
+`Backend module <>`__ \ uses lightweight sqlite as the off-chain data storage layer, providing basic order data and market data query \ `Interface <>`__ \. If you want a better service, you can import the data on the chain into the data middleware through the \ `Stream module <>`__ \, and output it with a special push and market calculation service.
 
-扩展阅读：
-`如何运用Stream模块构建高效的DEX行情和推送服务 <>`__\ ``此处跳转到项目博客``
+Further reading:
+`How to use the Stream module to build an efficient DEX market and push service <>`__ \ `` Jump here to the project blog``
 
-对接流量入口
-~~~~~~~~~~~~~~~~~~~~~~~~
+Docking traffic entrance
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-虽然通过OKChain命令行可以可以使用DEX的所有操作（下单，撤单），但是DEX作为一个交易应用，功能更全更完善的可视化交易辅助工具会给交易者提供最直接的帮助，因此DEX运营方可以自行选择自己的流量入口，既可以查看\ `API接口设计 <>`__\ 定制自己的WEB端或者移动端，也可以选择由社区提供的\ `OpenDEX-UI <>`__\ ，快速启动一个交易所模板。
+Although all operations of DEX (order placing, order cancellation) can be used through the OKChain command line, DEX is a trading application with more complete and complete visual trading assistance tools that will provide the most direct help to traders, so DEX operations The party can choose its own traffic entrance, either view \ `API interface design <>`__ \ to customize its own WEB or mobile terminal, or choose \ `OpenDEX-UI <>`__ \ provided by the community, fast Start an exchange template.
+
+

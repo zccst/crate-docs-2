@@ -3,36 +3,37 @@ DEX Operations FAQ
 
 
 
-什么是DEX运营方？我们为什么需要DEX运营方？
+What is  DEX Operations? Why do we need DEX Operations?
 ------------------------------------------------------------------------
 
-DEX运营方是运营一个去中心化交易所的实体，他的核心资产是他所运营的数字资产交易对，而他的价值则是通过数字资产交易对的运营活动而体现的。一般来说DEX运营方只需要提供一个\ `流量入口 <>`__\ 及基本的流动性供应就可以了。
+The DEX Operator is an entity that operates a decentralized exchange. His core assets are the digital asset trading pairs he operates, and his value is reflected through the operation of digital asset trading pairs. Generally speaking, the DEX operator only needs to provide a `flow entrance <>`__  and basic liquidity supply.
 
-我们为什么需要DEX运营方？
+Why do we need DEX Operators?
 -----------------------------------------------------------
 
-无论是中心化交易所还是去中心化交易所，都是了为解决数字资产的置换需求。
+Whether it is a centralized exchange or a decentralized exchange, it is to solve the replacement needs of digital assets.
 
-同人类的发展史中我们可以很直观的认知到，在相同技术水平下，集权是最有效的提升效率的方式，即让专业的人做专业的事情。这也是为什么注重效率的中心化交易所会比去中心化交易所发展的更近快速。
+In the development history of human beings, we can intuitively recognize that at the same technical level, centralization is the most effective way to improve efficiency, that is, let professional people do professional things. This is why centralized exchanges that focus on efficiency will develop more quickly than decentralized exchanges.
 
-但其实并不是所有的事情都要用最有效率的方式解决，在中心化交易所满足了置换需求中部分注重效率的需求后，那些被忽略的场景，如更关注安全或者公平的场景也亟待解决。在区块链世界中，则是体现在了资金委托的信用风险上，因此去中心化交易所就是针对这一点的交易系统，所以中心化交易所与去中心化交易所并不是替代关系，而是相辅相成的兄弟关系。
+But in fact, not all things need to be solved in the most efficient way. After the centralized exchange meets the need for partial efficiency in the replacement demand, those neglected scenarios, such as those that focus more on security or fairness, are also urgently needed. solve. In the blockchain world, it is reflected in the credit risk of fund entrustment, so decentralized exchanges are a trading system for this point, so centralized exchanges and decentralized exchanges are not an alternative relationship, and It is a complementary brotherhood.
 
-进一步的，一个交易所在生态中承担的实际上是\ **增信**\ 的角色。去中心化交易所也是一样，因此一个去中心化交易所的运营方则是这个\ **增信**\ 角色的主体。而在传统的理念中，通常把这个\ **增信**\ 角色的主体定义为技术，即这条公链本身，但是根据这些年市场对于此类项目的反馈，我们认为用户并不认可这种方案。
+Furthermore, an exchange actually assumes the role of ** Zengxin ** \ in the ecosystem. The same is true for decentralized exchanges, so the operator of a decentralized exchange is the main body of this role. In the traditional concept, the main body of this \ ** Zengxin ** \ role is usually defined as the technology, that is, the public chain itself, but based on the market ’s feedback on such projects in recent years, we believe that the user does not approve This program.
 
-分析其原因，我们认为是缺少了运营主体的存在。如同我们接触到的电商模式，淘宝是平台，而真正向用户提供服务的是淘宝卖家。淘宝这个平台对于这个卖家起到了增信的服务但是并不意味着商家可以不做任何商业运营活动。而传统的去中心化交易所模式为了突出去中心化的特质，过度强调平台而可以忽略商家本身这个运营主体而导致的。
+Analyzing the reasons, we believe that there is a lack of operating entities. Like the e-commerce model we are exposed to, Taobao is a platform, and it is Taobao sellers who really provide services to users. The platform of Taobao plays a credit-enhancing service for this seller, but it does not mean that the merchant can not do any commercial operations. In order to highlight the characteristics of decentralization, the traditional decentralized exchange model puts too much emphasis on the platform and can ignore the business itself as the main operating entity.
 
-因此OKChain中DEX运营方则是为了解决此问题而提出的。
+Therefore, the DEX operator in OKChain is proposed to solve this problem.
 
-DEX运营方为什么不能是公链运营方？
----------------------------------------
+Why can't DEX Operators be chain-operators?
+---------------------------------------------------
 
-如果一条链上只有一个运营方，那么这个链的生态也是封闭，早在2013年就有项目进行过此类模式的实验，但是因为封闭生态的限制导致其发展受限，了解更多阅读\ **`链上撮合手续费设计 <>`__**\ 。因此如果想要一个开放的DEX生态，就不能由公链运营方承担全部DEX运营的工作。
 
-因此，也引发了新的设计挑战，即如何使所有的DEX运营方可以公平，开放的使用区块链资源。
+If there is only one operator on a chain, the ecology of this chain is also closed. As early as 2013, projects have conducted experiments of such models, but their development has been restricted due to the limitation of the closed ecology. Learn more  **`Chain matching fee design <>`__**. Therefore, if you want an open DEX ecosystem, the public chain operator cannot undertake all the work of DEX operations.
 
-比如，\ `数字资产交易对的发行 <>`__\ 等针对交易对的管理，应该如\ `发行数字资产 <>`__\ 一样是不需要许可的，因为这是DEX运营方最核心的资产，也是最基本的需求。同时，针对撮合引擎的使用，系统上如果承载了价值参差不齐的数字资产交易对，在系统资源不足时，OpenDEX也引入了\ **`“数字资产撮合金” <>`__**\ 的概念，通过类似锁仓的机制，采用竞价排名的方式分配系统资源。
+Therefore, a new design challenge is also raised, namely how to make all DEX operators use the blockchain resources fairly and openly.
 
-DEX运营方的成本
+For example, the management of trading pairs such as the issuance of  `digital asset trading pairs <>`__  should be the same as \ `Issuing digital assets <>` __ \, because it is the core of the DEX operator. Assets are also the most basic needs. At the same time, for the use of the matching engine, if the system carries variable value digital asset trading pairs, when the system resources are insufficient, OpenDEX also introduced \ ** `" Digital Asset Matching Alloy "<>` __ ** \ The concept of allocating system resources through auction ranking is adopted through a mechanism similar to lock-up.
+
+DEX Operators costs
 --------------------------
 
-DEX运营方的价值则是通过数字资产交易对的运营活动而体现的。在区块链系统中，应用开发者无需承担服务器成本，只需要开发成本和DAPP应用的部署成本，而手续费的设计本质为出块节点出售自身的计算和存储资源而应得的收益。因此所有的手续费是作为收益分配给出块节点的。因此传统DEX方案中，都会强制行的将撮合部分的手续费也分配给出快节点，也是因为出块节点即DEX运营方。而在OpenDEX中，已经将DEX运营方与公链运营方区分开来，因此由撮合促成的撮合手续费是返还给DEX运营方本身的，以此解决了传统DEX方案中因为做市成本高而导致的流动性问题。阅读\ `手续费设计 <>`__\ 了解更多。
+The value of DEX operators is reflected through the operation activities of digital asset trading pairs. In the blockchain system, application developers do not need to bear the server cost, only the development cost and the deployment cost of the DAPP application, and the design fee is essentially the revenue that the block node sells its computing and storage resources. Therefore, all the handling fees are distributed to the block nodes as revenue. Therefore, in the traditional DEX scheme, it is mandatory to allocate the handling fee of the matching part to the fast node, also because the block node is the DEX operator. In OpenDEX, the DEX operator has been distinguished from the public chain operator, so the matching commission fee caused by the matching is returned to the DEX operator itself, in order to solve the traditional DEX scheme because of the high cost of market making. The resulting liquidity problem. Read  `Handling fee design <>`__ to learn more.
