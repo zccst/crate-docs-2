@@ -25,7 +25,12 @@ okchaintool pubkey
 
 The public key is converted in different formats. The following two
 commands get the same result:
-``bash okchaintool pubkey TZTQnfqOsi89SeoXVnIw+tnFJnr4X8qVC0U8AsEmFk4= okchaintool pubkey 4D94D09DFA8EB22F3D49EA17567230FAD9C5267AF85FCA950B453C02C126164E``
+.. code:: bash
+
+    okchaintool pubkey TZTQnfqOsi89SeoXVnIw+tnFJnr4X8qVC0U8AsEmFk4=
+    okchaintool pubkey 4D94D09DFA8EB22F3D49EA17567230FAD9C5267AF85FCA950B453C02C126164E
+
+
 return
 
 .. code:: bash
