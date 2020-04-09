@@ -14,7 +14,7 @@ Initialize the node and create the necessary config files:
 
 .. code:: bash
 
-    okchaind init --chain-id okchain 
+    okchaind init --chain-id okchain
 
 You can edit ``moniker`` in the ``$HOME/.okchaind/config/config.toml``
 
@@ -77,7 +77,7 @@ Connect seed nodes configured in ``config.toml`` to OKChain
 
 .. code:: bash
 
-    okchaind start 
+    okchaind start
 
 4.2 Use docker to activate
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -86,8 +86,24 @@ Connect seed nodes configured in ``config.toml`` to OKChain
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 okchaind can also be enabled by a docker container. We have officially
-released a number of docker images.
-:math:`TAG represents the version number of okchaind. The version of the testnet is ``\ TAG=v0.1.0\ ``. ```bash $ docker run \     -e OKDEX_P2P_SEEDS=b7c6bdfe0c3a6c1c68d6d6849f1b60f566e189dd@3.13.150.20:26656,d7eec05e6449945c8e0fd080d58977d671eae588@35.176.111.229:26656,223b5b41d1dba9057401def49b456630e1ab2599@18.162.106.25:26656 \     -e OKDEX_P2P_ADDR_BOOK_STRICT=false \     -e OKDEX_LOG_STDOUT=false \     -e OKDEX_LOG_FILE=/root/.okchaind/okchaind.log \     -p 26656:26656 \     -p 26657:26657 \     -p 26659:26659 \     -d okchain/testnet:v0.1.0 ``` #### 4.2.2 Use docker-compose commands to activate First, save the below in``\ okchain\_full\_node.yml\`.
+released a number of docker images. TAG represents the version number of okchaind. The version of the testnet is ``TAG=v0.1.0``.
+
+.. code:: bash
+    $ docker run \
+        -e OKDEX_P2P_SEEDS=b7c6bdfe0c3a6c1c68d6d6849f1b60f566e189dd@3.13.150.20:26656,d7eec05e6449945c8e0fd080d58977d671eae588@35.176.111.229:26656,223b5b41d1dba9057401def49b456630e1ab2599@18.162.106.25:26656 \
+        -e OKDEX_P2P_ADDR_BOOK_STRICT=false \
+        -e OKDEX_LOG_STDOUT=false \
+        -e OKDEX_LOG_FILE=/root/.okchaind/okchaind.log \
+        -p 26656:26656 \
+        -p 26657:26657 \
+        -p 26659:26659 \
+        -d okchain/testnet:v0.1.0
+
+
+4.2.2 Use docker-compose commands to activate
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+First, save the below in ``okchain_full_node.yml``.
 
 .. code:: yml
 
