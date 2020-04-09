@@ -89,6 +89,7 @@ okchaind can also be enabled by a docker container. We have officially
 released a number of docker images. TAG represents the version number of okchaind. The version of the testnet is ``TAG=v0.1.0``.
 
 .. code:: bash
+
     $ docker run \
         -e OKDEX_P2P_SEEDS=b7c6bdfe0c3a6c1c68d6d6849f1b60f566e189dd@3.13.150.20:26656,d7eec05e6449945c8e0fd080d58977d671eae588@35.176.111.229:26656,223b5b41d1dba9057401def49b456630e1ab2599@18.162.106.25:26656 \
         -e OKDEX_P2P_ADDR_BOOK_STRICT=false \
